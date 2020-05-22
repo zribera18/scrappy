@@ -5,6 +5,6 @@ scrappy is a python cli scraping tool.
 # usage
 
 
-'''bash
+```bash
 scrappy <url> <config_name>
-'''
+```
