@@ -1,0 +1,54 @@
+{
+  "ecommerce": {
+    "title": [
+      "class=\"product-h1-brand\"><span itemprop=\"name\">\\w*?</span></a></span>\\s*?<span itemprop=\"name\">(.*?)</span>",
+      "<meta name=\"description\" content=\"(.*?)\">",
+      "<span id=\"productTitle\" class=\"a-size-large\">\\s*?(.*?)\\s*?</span>"
+    ],
+    "price": [
+      "<meta itemprop=\"price\" content=\"(.*?)\"\\s*/>",
+      "<span id=\"price_inside_buybox\" class=\"a-size-medium a-color-price\">\\s*?\\s*?(.*?)\\s*?</span>",
+      "\"prices\":{\"sale\":{\"highValue\":\\w*?,\"lowValue\":(.*?)\""
+      ],
+    "brand": [
+      "class=\"product-h1-brand\"><span itemprop=\"name\">(.*?)</span></a></span>",
+      "\"brand\":(.*?),"
+    ]
+  },
+  "currency": {
+    "from_curr": "",
+    "from_symbol": "",
+    "to_curr": "",
+    "to_symbol": "",
+    "rate": ""
+  },
+  "housing-trulia" : {
+    "search_regex" : "\"activeForSaleListing\":{(.*?)\"heroImage\"",
+    "capture_regex" : {
+      "price": [
+        "\"price\": \"{\"formattedPrice\":\"(.*?))\","
+      ],
+      "address" : [
+        "\"fullLocation\":\"(.*?)\""
+      ],
+      "neightborhood": [
+        "\"neighborhoodName\":\"(.*?)\","
+      ],
+      "gps_coordingates": [
+        "\"coordinates\":{\"latitude\":39.795715,\"longitude\":-104.75074,"
+      ],
+      "square_feet": [
+        "\"floorSpace\":{\"formattedDimension\":\"2,012 sqft\""
+      ],
+      "bedrooms": [
+        "\"bedrooms\":{\"formattedValue\":\"(.*?)bd\",\"__typename\":\"HOME_FixedBedrooms\"}"
+      ],
+      "bathrooms": [
+        "\"bedrooms\":{\"formattedValue\":\"(.*?)ba\",\"__typename\":\"HOME_FixedBathrooms\"}"
+      ]
+
+    }
+
+
+  }
+}
